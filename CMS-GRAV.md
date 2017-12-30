@@ -28,7 +28,7 @@ sudo apt-get install php7.0 php7.0-fpm php7.0-cli php7.0-gd php7.0-mbstring php-
 ```shell
 sudo pecl install apcu
 ```
-### Crie um arquivo chamado **apcu.ini** (Pode ser usado qualquer editor de texto de sua prefeência)
+### Crie um arquivo chamado **apcu.ini** (Pode ser usado qualquer editor de texto de sua preferência)
 
 ```shell
 sudo nano /etc/php/7.0/mods-available/apcu.ini
@@ -47,7 +47,7 @@ sudo pecl install yaml-2.0.0
 ```shell
 sudo nano /etc/php/7.0/mods-available/yaml.ini
 ```
-### Insira no arquivo recem criado a seguinte informação:
+### Insira no arquivo recém criado a seguinte informação:
 
 extension=yaml.so
 
@@ -94,7 +94,7 @@ sudo mv composer.phar /usr/local/bin/composer
 sudo nano /etc/php/7.0/fpm/pool.d/www-data.conf
 ```
 
-#### Salve as seguites informações nele:
+#### Salve as seguintes informações nele:
 
 [www-data]
 user = www-data
@@ -138,7 +138,7 @@ Atere para:
    Options Indexes FollowSymLinks
    AllowOverride All
    Require all granted
-</Directory> 
+</Directory>
 
 ## Reinicie o serviço do Apache:
 
