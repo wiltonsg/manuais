@@ -4,6 +4,8 @@ autor: Wilton Gonçalves
 versão: 1.0
 ---
 
+# Instalando R e RStudio em Ubuntu e variantes
+
 # Passos para fazer a instalação do Projeto R:
 
 ```
@@ -22,7 +24,7 @@ sudo apt-get update
 sudo apt-get install r-base
 ```
 
-## Despois de instalado execute o camando abaixo para acessar e verificar a versão do R
+## Despois de instalado execute o comando abaixo para acessar e verificar a versão do R
 
 ```
 sudo -i R
@@ -32,7 +34,7 @@ sudo -i R
 
 ```
 install.packages('Rcmdr')
-library(Rcmdr) 
+library(Rcmdr)
 ```
 
 ## Este pacote gera gráficos ASCII em arquivo txt:
@@ -47,7 +49,7 @@ Acesse a página: https://www.rstudio.com/products/rstudio/download/
 Baixe o arquivo .deb referente ao seu sistema e execute a instalção usando o Gdebi.
 
 Ou basta estar na pasta onde o arquivo foi salvo e executar o comando:
-	
+
 ```
 sudo dpkg -i rstudio_versão_do_arquivo.deb
 ```
