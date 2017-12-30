@@ -3,10 +3,8 @@ title: Instalando o PyCharm no Ubuntu e derivados
 autor: Wilton Gonçalves
 versão: 1.0
 ---
-# Instalando o PyCharm no Ubuntu e derivados
 
-O objetivo aqui é instalar o PyCharm no Ubuntu e distribuições "irmãs" (como o Mint); estou instalando a versão **Community Edition**, que acredito que é a que muita gente que começa com essa poderosa IDE vai instalar pra dar os primeiros passos, experimentar.
-(aliás, bom avisar antes de começar: fiz o guia baseado no Ubuntu 14.04 e no Linux Mint 17.1; mas já fiz o mesmo procedimento em versões anteriores tanto do PyCharm quanto do Ubuntu, e com a versão "Professional" do PyCharm, e funcionou bem.)
+# Instalando o PyCharm no Ubuntu e derivados
 
 ## Parte 1 - instalar o Java
 
@@ -16,15 +14,19 @@ Abra o terminal e execute os comandos abaixo:
 ```shell
 sudo add-apt-repository ppa:webupd8team/java
 ```
+
 ```shell
 sudo apt-get update
 ```
+
 ```shell
 echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | sudo /usr/bin/debconf-set-selections
 ```
+
 ```shell
 sudo apt-get install oracle-java8-installer -y
 ```
+
 ```shell
 sudo apt-get install oracle-java8-set-default -y
 ```
@@ -52,6 +54,7 @@ Para isto, abra o console e digite:
 cd ~/Downloads
 wget -c https://bootstrap.pypa.io/get-pip.py
 ```
+
 ```shell
 sudo -H python2 get-pip.py
 sudo -H python3 get-pip.py
@@ -64,7 +67,6 @@ sudo -H pip2 install virtualenv
 2. Clique em "Download Community"
 3. Grave o arquivo no diretório que quiser
 
-
 ## Parte 4 - Instalar o PyCharm
 
 Com os pré-requisitos prontos e instalados, vamos ao prato principal:
@@ -72,6 +74,7 @@ Com os pré-requisitos prontos e instalados, vamos ao prato principal:
 ```shell
 sudo tar -C /opt/ -xzf <diretorio_onde_gravou_o_download>/pycharm-community-4.5.1.tar.gz
 ```
+
 1. Abra o navegador de arquivos e vá ao diretório /opt/pycharm-community-4.5.1
 2. Entre no diretório 'bin' e, com dois cliques sobre, execute o script 'pycharm.sh'
 3. Se aparecer uma janela perguntando como rodar o programa, clique no último botão ('Executar' ou 'Run')
