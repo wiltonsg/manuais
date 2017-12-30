@@ -3,7 +3,7 @@ title: Instalação do Odoo 10 no Ubuntu 16.04 LTS
 autor: Wilton Gonçalves
 versão: 1.2
 ---
-# Instalação do Odoo 10 no Ubuntu 16.04 LTS
+# Instalação do Odoo 10 no Ubuntu 16.04 LTS e variantes
 
 ## Passo a passo para instalação
 
@@ -33,7 +33,7 @@ sudo apt-get dist-upgrade
 
 ### Passo 3
 
-Instale Dependências do Python para Odoo
+Instale as dependências do Python para Odoo
 
 ```shell
 sudo apt-get install python-dateutil python-docutils python-feedparser python-jinja2 python-ldap python-libxslt1 python-lxml python-mako python-mock python-openid python-psycopg2 python-psutil python-pybabel python-pychart python-pydot python-pyparsing python-reportlab python-simplejson python-tz python-unittest2 python-vatnumber python-vobject python-webdav python-werkzeug python-xlwt python-yaml python-zsi poppler-utils python-pip python-pypdf python-passlib python-decorator gcc python-dev mc bzr python-setuptools python-markupsafe python-reportlab-accel python-zsi python-yaml python-argparse python-openssl python-egenix-mxdatetime python-usb python-serial lptools make python-pydot python-psutil python-paramiko poppler-utils python-pdftools antiword python-requests python-xlsxwriter python-suds python-psycogreen python-ofxparse python-gevent
@@ -41,7 +41,7 @@ sudo apt-get install python-dateutil python-docutils python-feedparser python-ji
 
 ### Passo 4
 
-Dependências do  Odoo Web
+Dependências do Odoo Web
 
 ```shell
 sudo apt-get install -y npm
@@ -79,7 +79,7 @@ No terminal digite o seguinte comando para adicionar a chave:
 ```shell
 wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
 ```
-Atualizando a lista do repositórios e instalando
+Atualizando a lista dos repositórios e instalando
 
 ```shell
 sudo apt-get update
@@ -200,7 +200,6 @@ sudo chown -R odoo: odoo-10.0
 
 Criar arquivo de registro Odoo
 
-
 ```shell
 sudo mkdir /var/log/odoo
 ```
@@ -212,7 +211,6 @@ sudo chown -R odoo:root /var/log/odoo
 ### Passo 11
 
 Edite o arquivo de configuração de Odoo
-
 
 ```shell
 sudo cp /opt/odoo/odoo-10.0/debian/odoo.conf /etc/odoo.conf
@@ -227,7 +225,6 @@ sudo nano /etc/odoo.conf
 ```
 
 Copie e cole abaixo o conteúdo no arquivo de configuração, escreva caminhos de complementos corretos
-
 
 ```
 [options]
@@ -293,7 +290,7 @@ cd /opt/odoo/odoo-10.0
 
 ### Passo 14
 
-Abra um navegador Web para acessar o Odoo 10
+Abra um navegador Web de sua preferência para acessar o Odoo 10
 
 ```
 http://localhost:8069
