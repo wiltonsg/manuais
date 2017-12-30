@@ -5,21 +5,15 @@ versão: 1.0
 ---
 # Instalando o Apache 2.4 + PHP 7 + MariaDB (LAMP)
 
-## Atenção
-
-Esse post foi **atualizado em 14/01/2017** e testado com sucesso em uma instalação limpa do Ubuntu 16.10 x64, então na teoria você pode utilizar este post em qualquer distribuição baseada no Debian, tais como, Mint, Elementary OS e etc..
-
 ## Atualizando o sistema
-
-Como de praxe vamos começar atualizando o sistema, rode o comando a baixo e aguarde.
 
 ```shell
 sudo apt-get update && sudo apt-get -y upgrade && sudo apt-get -y dist-upgrade
 ```
 
-## MySQL
+## Instalando o MariaDB
 
-O próximo passo é instalar o MySQL,vamos instalar o MariaDB que é a versão opem source do MySQL, mas sinta-se a vontade para instalar o MySQL da Oracle.
+MariaDB que é a versão Open Source do MySQL.
 No terminal rode o comando abaixo, e informe sua senha, você pode deixá-la em branco no ambiente de desenvolvimento, mas lembre-se de utilizar uma senha segura no ambiente de produção.
 
 ```shell
@@ -27,8 +21,7 @@ sudo apt-get install mariadb-server
 ```
 
 A dica abaixo é opcional no ambiente de desenvolvimento, mas é altamente recomendável que você execute o comando abaixo no servidor de produção.
-O comando **mysql_secure_installation** é muito importante e deve ser usado no servidor de produção, o assistente irá nos guiar através de algumas opções que vem por configuradas por padrão, mas são perigosas de se usar em no servidor de produção.
-
+O comando **mysql_secure_installation** é muito importante e deve ser usado no servidor de produção, o assistente irá nos guiar através de algumas opções que vem configuradas por padrão, mas são perigosas de se usar em no servidor de produção.
 
 ```shell
 sudo mysql_secure_installation
@@ -39,38 +32,34 @@ Esta é uma oportunidade para você mudar sua senha para algo seguro se você n�
 Você deve responder “Y” (Sim) para todas as questões restantes.
 Pronto, agora nosso MySQL está pronto para uso.
 
-## Apache 2.4
-
-Nosso próximo passo é instalar o Apache, é muito simples, rode o comando abaixo.
+## Instalando o Apache 2.4
 
 ```shell
 sudo apt-get install apache2
 ```
 
-Abra o navegador e acesse http://localhost ou http://seu.ip, a página padrão do Apache deve ser exibida, estamos indo bem!.
+Abra o navegador e acesse http://localhost ou http://seu.ip, a página padrão do Apache deve ser exibida.
 
 ## Rewrite Module
 
-Para podermos utilizar URLs amigáveis devemos ativar o modulo rewrite do apache, a maioria dos frameworks PHP pedem que ele esteja ativo, após a ativação reinicie o apache.
+Para podermos utilizar URLs amigáveis devemos ativar o módulo rewrite do apache, a maioria dos frameworks PHP pedem que ele esteja ativo, após a ativação reinicie o apache.
 
 ```shell
 sudo a2enmod rewrite
 sudo systemctl restart apache2
 ```
 
-## PHP 7
-
-Agora que o Apache já está instalado, rode o comando abaixo para instalar o PHP 7 e os pacotes adicionais.
+## Instalando o PHP 7 e os módulos adicionais
 
 ```shell
 sudo apt-get install libapache2-mod-php7.0 php7.0-mysql php7.0-curl php7.0-json php-memcached php7.0-dev php7.0-mcrypt php7.0-sqlite3 php7.0-mbstring
 ```
 
-**Dica de ouro: deixando o PHP mais seguro**
+**Deixando o PHP mais seguro**
 
 Vamos fazer uma pequena alteração na configuração do PHP para tornar nossa configuração mais segura.
 
-Abra o arquivo /etc/php/7.0/apache2/php.ini com o nano e procure pela linha (ctrl + w) **cgi.fix_pathinfo**, ela está comentada por ; e com valor setado para 1, descomente a linha e defina o valor para zero.
+Abra o arquivo /etc/php/7.0/apache2/php.ini com o nano e procure pela linha (ctrl + w) **cgi.fix_pathinfo**, ela está comentada por ";" e com valor setado para 1, descomente a linha e defina o valor para zero (0).
 
 ```shell
 sudo nano /etc/php/7.0/apache2/php.ini
@@ -82,9 +71,7 @@ Deve ficar conforme abaixo
 cgi.fix_pathinfo=0
 ```
 
-Esta é uma configuração previne que o PHP tente executar o arquivo mais PHP próximo se o arquivo solicitado não puder ser encontrado. Isso basicamente permitiria aos usuários elaborar pedidos PHP de uma forma que permitisse executar scripts que não deveriam ser autorizados a executar.
-
-Tudo certo, Apache2 com o comando abaixo
+Reinicie o Apache com o comando abaixo
 
 ```shell
 sudo systemctl restart apache2
