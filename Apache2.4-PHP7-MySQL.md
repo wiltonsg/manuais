@@ -5,35 +5,25 @@ versão: 1.0
 ---
 # Instalando o Apache 2.4 + PHP 7 + MySQL (LAMP)
 
-## Atenção
-
-Esse post foi **atualizado em 14/01/2017** e testado com sucesso em uma instalação limpa do Ubuntu 16.10 x64, então na teoria você pode utilizar este post em qualquer distribuição baseada no Debian, tais como, Mint, Elementary OS e etc..
-
 ## Atualizando o sistema
-
-Como de praxe vamos começar atualizando o sistema, rode o comando a baixo e aguarde.
 
 ```shell
 sudo apt-get update && sudo apt-get -y upgrade && sudo apt-get -y dist-upgrade
 ```
 
-## MySQL
-
-O próximo passo é instalar o MySQL.
+## Instalando o MySQL
 
 ```shell
 sudo apt-get install mysql-server
 ```
 
-## Apache 2.4
-
-Nosso próximo passo é instalar o Apache, é muito simples, rode o comando abaixo.
+## Instalando o Apache 2.4
 
 ```shell
 sudo apt-get install apache2
 ```
 
-Abra o navegador e acesse http://localhost ou http://seu.ip, a página padrão do Apache deve ser exibida, estamos indo bem!.
+Abra o navegador e acesse http://localhost ou http://seu.ip, a página padrão do Apache deve ser exibida.
 
 ## Rewrite Module
 
@@ -44,9 +34,7 @@ sudo a2enmod rewrite
 sudo systemctl restart apache2
 ```
 
-## PHP 7
-
-Agora que o Apache já está instalado, rode o comando abaixo para instalar o PHP 7 e os pacotes adicionais.
+## Instalando o PHP 7 e os módulos adicionais
 
 ```shell
 sudo apt-get install libapache2-mod-php7.0 php7.0-mysql php7.0-curl php7.0-json php-memcached php7.0-dev php7.0-mcrypt php7.0-sqlite3 php7.0-mbstring
@@ -68,9 +56,7 @@ Deve ficar conforme abaixo
 cgi.fix_pathinfo=0
 ```
 
-Esta é uma configuração previne que o PHP tente executar o arquivo mais PHP próximo se o arquivo solicitado não puder ser encontrado. Isso basicamente permitiria aos usuários elaborar pedidos PHP de uma forma que permitisse executar scripts que não deveriam ser autorizados a executar.
-
-Tudo certo, Apache2 com o comando abaixo
+Reinicie o Apache com o comando abaixo
 
 ```shell
 sudo systemctl restart apache2
@@ -125,7 +111,7 @@ cp modules/xdebug.so /usr/lib/php/20151012
 sudo echo 'zend_extension = /usr/lib/php/20151012/xdebug.so' >> /etc/php/7.0/apache2/php.ini
 ```
 
-Reinice o Apache e voilá.
+Reinice o Apache e pronto.
 
 ```shell
 sudo systemctl restart apache2
