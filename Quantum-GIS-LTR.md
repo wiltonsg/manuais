@@ -36,11 +36,11 @@ sudo apt-get install qgis python-qgis qgis-plugin-grass
 
 ### Outras formas de instalação
 
-deb     http://ppa.launchpad.net/ubuntugis/ubuntugis-unstable/ubuntu xenial main
+deb http://ppa.launchpad.net/ubuntugis/ubuntugis-unstable/ubuntu xenial main
 
 Se você usar um dos nossos repositórios baseados em ubuntugis você também precisa adicionar seguinte linha
 
-deb     http://ppa.launchpad.net/ubuntugis/ubuntugis-unstable/ubuntu *codename* main
+deb http://ppa.launchpad.net/ubuntugis/ubuntugis-unstable/ubuntu *codename* main
 
 Depois digite:
 
@@ -72,7 +72,7 @@ Alternativamente, você pode baixar a chave de um keyserver e adicione a chave p
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key 073D307A618E5811
 
 
-deb     http://qgis.org/debian-ltr ubuntu xenial main
+deb http://qgis.org/debian-ltr ubuntu xenial main
 deb-src http://qgis.org/ubuntugis-ltr ubuntu xenial main
 
 Via PPA
