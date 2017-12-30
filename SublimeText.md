@@ -26,6 +26,9 @@ sudo apt-get update
 sudo apt-get install sublime-text
 ```
 
+Fonte:
+http://www.edivaldobrito.com.br/editor-sublime-text-no-ubuntu/
+
 # Plugin para executar códigos-fontes dentro do Sublime Text sem abrir o terminal
 
 Instale o plugin **Terminality**
