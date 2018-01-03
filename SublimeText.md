@@ -35,7 +35,6 @@ http://www.edivaldobrito.com.br/editor-sublime-text-no-ubuntu/
 2. Acesse o site https://packagecontrol.io/installation
 3. Copie todo o código referente a versão do seu Sublime Text e cole no console do programa e pressione Enter do seu teclado.
 
-
 # Plugin para executar códigos-fontes dentro do Sublime Text sem abrir o terminal
 
 Instale o plugin **Terminality**
