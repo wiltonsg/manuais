@@ -1,7 +1,7 @@
 ---
 title: Instalação do Odoo 10 no Ubuntu 16.04 LTS
 autor: Wilton Gonçalves
-versão: 1.2
+versão: 1.3
 ---
 # Instalação do Odoo 10 no Ubuntu 16.04 LTS e variantes
 
@@ -123,7 +123,9 @@ sudo adduser --system --home=/opt/odoo --group odoo
 
 ### Passo 8
 
-Instalando o Gdata
+Instalando o GData
+
+Biblioteca de clientes Python para API de dados do Google responsável pela leitura, escrita e modificação de informações na web.
 
 ```shell
 cd /opt/odoo
@@ -242,11 +244,15 @@ log_level = error
 
 ### Passo 12
 
-WKHTMLTOPDF para Odoo Siga as etapas mencionadas abaixo.
+WKHTMLTOPDF é ferramenta de código aberto (LGPLv3) para renderizar HTML em PDF e vários formatos de imagem usando o mecanismo de renderização Qt WebKit.
+
+Siga as etapas mencionadas abaixo para fazer a instalação.
 
 #### Passo 12.1
 
-Baixe a versão wkhtmltopdf de https://wkhtmltopdf.org/downloads.html obedecendo da versão do seu Sistema Operacional
+Baixe a versão wkhtmltopdf de https://wkhtmltopdf.org/downloads.html obedecendo da versão do seu Sistema Operacional.
+
+Ou baixe através do GitHub.
 
 ```shell
 wget https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.4/wkhtmltox-0.12.4_linux-generic-amd64.tar.xz
