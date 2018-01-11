@@ -1,7 +1,6 @@
 ---
 title: Instalando o PyCharm no Ubuntu e derivados
 autor: Wilton Gonçalves
-versão: 1.0
 ---
 
 # Instalando o PyCharm no Ubuntu e derivados
@@ -72,9 +71,11 @@ sudo -H pip2 install virtualenv
 Com os pré-requisitos prontos e instalados, vamos ao prato principal:
 
 ```shell
-sudo tar -C /opt/ -xzf <diretorio_onde_gravou_o_download>/pycharm-community-4.5.1.tar.gz
+sudo tar -C /opt/ -xzf <diretorio_onde_gravou_o_download>/pycharm-community-2017.3.2.tar.gz
+cd /opt/pycharm-community-2017.3.2/bin
+./pycharm.sh
 ```
-
+Ou
 1. Abra o navegador de arquivos e vá ao diretório /opt/pycharm-community-4.5.1
 2. Entre no diretório 'bin' e, com dois cliques sobre, execute o script 'pycharm.sh'
 3. Se aparecer uma janela perguntando como rodar o programa, clique no último botão ('Executar' ou 'Run')
