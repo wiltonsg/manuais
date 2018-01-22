@@ -1,7 +1,6 @@
 ---
 title: Instalando o Sublime Text em Debian e variantes
 autor: Wilton Gonçalves
-versão: 1.0
 ---
 # Instalando o Sublime Text em Debian e variantes
 

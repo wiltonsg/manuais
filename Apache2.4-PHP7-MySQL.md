@@ -1,7 +1,6 @@
 ---
 title: Instalando o Apache 2.4 + PHP 7 + MySQL
 autor: Wilton Gonçalves
-versão: 1.0
 ---
 # Instalando o Apache 2.4 + PHP 7 + MySQL (LAMP)
 

@@ -1,7 +1,6 @@
 ---
 title: Instalando R e RStudio em Ubuntu e variantes
 autor: Wilton Gonçalves
-versão: 1.0
 ---
 
 # Instalando R e RStudio em Ubuntu e variantes

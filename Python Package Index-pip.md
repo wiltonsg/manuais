@@ -1,7 +1,6 @@
 ---
 title: Como usar o pip
 autor: Wilton Gonçalves
-versão: 0.1
 ---
 
 # O que é o pip?

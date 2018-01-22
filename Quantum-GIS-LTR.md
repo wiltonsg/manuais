@@ -1,7 +1,6 @@
 ---
 title: Instalação o Quantum GIS LTR no Ubuntu e Debian
 autor: Wilton Gonçalves
-versão: 1.0
 ---
 
 # Instalação o Quantum GIS LTR no Ubuntu e Debian

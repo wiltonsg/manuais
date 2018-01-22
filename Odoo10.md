@@ -1,7 +1,6 @@
 ---
 title: Instalação do Odoo 10 no Ubuntu 16.04 LTS
 autor: Wilton Gonçalves
-versão: 1.3
 ---
 # Instalação do Odoo 10 no Ubuntu 16.04 LTS e variantes
 

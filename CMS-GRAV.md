@@ -1,7 +1,6 @@
 ---
 title: Instalação do GRAV CMS
 autor: Wilton Gonçalves
-versão: 1.0
 ---
 # Instalação do GRAV CMS
 
