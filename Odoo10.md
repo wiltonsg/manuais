@@ -309,6 +309,8 @@ sudo rm -R /opt/odoo
 sudo rm -f /etc/odoo-server.conf
 sudo rm -f /etc/odoo.conf
 sudo rm -R /var/log/odoo
+sudo rm -f /usr/bin/wkhtmltoimage
+sudo rm -f /usr/bin/wkhtmltopdf
 sudo userdel -r odoo
 sudo groupdel odoo
 sudo apt-get purge postgresql-9.6* -y
@@ -317,12 +319,13 @@ sudo rm -r -f /etc/postgresql-common/
 sudo rm -r -f /var/lib/postgresql/
 sudo userdel -r postgres
 sudo groupdel postgres
-sudo rm /home/user/.local/share/odoo
-sudo rm /etc/apt/sources.list.d pgdg.list
-sudo rm /etc/apt/sources.list.d pgdg.list.save
+sudo rm -R ~/.local/share/Odoo
+sudo rm -f ~/.odoorc
+sudo rm -f /etc/apt/sources.list.d/pgdg.list
+sudo rm -f /etc/apt/sources.list.d/pgdg.list.save
 sudo apt-get purge npm* -y
 sudo apt-get autoremove -y
-sudo rm -R /home/user/.npm
+sudo rm -R ~/.npm
 sudo apt-get remove $(deborphan) -y
 ```
 
