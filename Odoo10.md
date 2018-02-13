@@ -301,6 +301,31 @@ Abra um navegador Web de sua preferência para acessar o Odoo 10
 http://localhost:8069
 ```
 
+# Removendo o Odoo
+Os comandos abaixo sevem para fazer a remoção completa do Odoo do seu Sistema junto com suas configurações.
+
+```
+sudo rm -R /opt/odoo
+sudo rm -f /etc/odoo-server.conf
+sudo rm -f /etc/odoo.conf
+sudo rm -R /var/log/odoo
+sudo userdel -r odoo
+sudo groupdel odoo
+sudo apt-get purge postgresql-9.6*
+sudo rm -r -f /etc/postgresql/
+sudo rm -r -f /etc/postgresql-common/
+sudo rm -r -f /var/lib/postgresql/
+sudo userdel -r postgres
+sudo groupdel postgres
+sudo rm /home/user/.local/share/odoo
+sudo rm /etc/apt/sources.list.d pgdg.list
+sudo rm /etc/apt/sources.list.d pgdg.list.save
+sudo apt-get purge npm*
+sudo apt-get autoremove
+sudo rm -R /home/user/.npm
+sudo apt-get remove $(deborphan)
+```
+
 Traduzido de GETOPENERP
 
 Fonte:
