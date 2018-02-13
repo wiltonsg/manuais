@@ -311,7 +311,7 @@ sudo rm -f /etc/odoo.conf
 sudo rm -R /var/log/odoo
 sudo userdel -r odoo
 sudo groupdel odoo
-sudo apt-get purge postgresql-9.6*
+sudo apt-get purge postgresql-9.6* -y
 sudo rm -r -f /etc/postgresql/
 sudo rm -r -f /etc/postgresql-common/
 sudo rm -r -f /var/lib/postgresql/
@@ -320,10 +320,10 @@ sudo groupdel postgres
 sudo rm /home/user/.local/share/odoo
 sudo rm /etc/apt/sources.list.d pgdg.list
 sudo rm /etc/apt/sources.list.d pgdg.list.save
-sudo apt-get purge npm*
-sudo apt-get autoremove
+sudo apt-get purge npm* -y
+sudo apt-get autoremove -y
 sudo rm -R /home/user/.npm
-sudo apt-get remove $(deborphan)
+sudo apt-get remove $(deborphan) -y
 ```
 
 Traduzido de GETOPENERP
