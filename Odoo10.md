@@ -35,7 +35,7 @@ sudo apt-get dist-upgrade
 Instale as dependências do Python para Odoo
 
 ```shell
-sudo apt-get install python-dateutil python-docutils python-feedparser python-jinja2 python-ldap python-libxslt1 python-lxml python-mako python-mock python-openid python-psycopg2 python-psutil python-pybabel python-pychart python-pydot python-pyparsing python-reportlab python-simplejson python-tz python-unittest2 python-vatnumber python-vobject python-webdav python-werkzeug python-xlwt python-yaml python-zsi poppler-utils python-pip python-pypdf python-passlib python-decorator gcc python-dev mc bzr python-setuptools python-markupsafe python-reportlab-accel python-zsi python-yaml python-argparse python-openssl python-egenix-mxdatetime python-usb python-serial lptools make python-pydot python-psutil python-paramiko poppler-utils python-pdftools antiword python-requests python-xlsxwriter python-suds python-psycogreen python-ofxparse python-gevent
+sudo apt-get install -y python-dateutil python-docutils python-feedparser python-jinja2 python-ldap python-libxslt1 python-lxml python-mako python-mock python-openid python-psycopg2 python-psutil python-pybabel python-pychart python-pydot python-pyparsing python-reportlab python-simplejson python-tz python-unittest2 python-vatnumber python-vobject python-webdav python-werkzeug python-xlwt python-yaml python-zsi poppler-utils python-pip python-pypdf python-passlib python-decorator gcc python-dev mc bzr python-setuptools python-markupsafe python-reportlab-accel python-zsi python-yaml python-argparse python-openssl python-egenix-mxdatetime python-usb python-serial lptools make python-pydot python-psutil python-paramiko poppler-utils python-pdftools antiword python-requests python-xlsxwriter python-suds python-psycogreen python-ofxparse python-gevent
 ```
 
 ### Passo 4
@@ -59,7 +59,7 @@ sudo npm install -g less less-plugin-clean-css
 Instalando o PostgreSQL
 
 ```shell
-sudo apt-get install python-software-properties
+sudo apt-get install -y python-software-properties
 ```
 Você pode usar qualquer editor de texto de sua preferência, aqui foi utilizado o Nano
 
@@ -85,7 +85,7 @@ sudo apt-get update
 ```
 
 ```shell
-sudo apt-get install postgresql-9.6
+sudo apt-get install -y postgresql-9.6
 ```
 
 ### Passo 6
@@ -134,7 +134,7 @@ Vá para o link "https://pypi.python.org/pypi/gdata" e baixe o gdata-2.0.18 e tr
 Caso contrário, através do terminal, siga o passo abaixo:
 
 ```shell
-wget https://pypi.python.org/packages/a8/70/bd554151443fe9e89d9a934a7891aaffc63b9cb5c7d608972919a002c03c/gdata-2.0.18.tar.gz
+sudo wget https://pypi.python.org/packages/a8/70/bd554151443fe9e89d9a934a7891aaffc63b9cb5c7d608972919a002c03c/gdata-2.0.18.tar.gz
 ```
 
 ```shell
@@ -254,7 +254,7 @@ Baixe a versão wkhtmltopdf de https://wkhtmltopdf.org/downloads.html obedecendo
 Ou baixe através do GitHub.
 
 ```shell
-wget https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.4/wkhtmltox-0.12.4_linux-generic-amd64.tar.xz
+sudo wget https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.4/wkhtmltox-0.12.4_linux-generic-amd64.tar.xz
 ```
 
 #### Passo 12.2
