@@ -1,8 +1,8 @@
 ---
-title: Instalação do Docker no Ubuntu 16.04
+title: Instalação do Docker CE no Ubuntu
 autor: Wilton Gonçalves
 ---
-# Instalação do Docker nu Ubuntu 16.04 LTS
+# Instalação do Docker CE no Ubuntu
 
 O Docker é uma plataforma de software que permite a criação, o teste e a implantação de aplicações rapidamente. O Docker cria pacotes de software em unidades padronizadas chamadas de contêineres que têm tudo o que o software precisa para ser executado, inclusive bibliotecas, ferramentas de sistema, código e runtime. Ao usar o Docker, é possível implantar e escalar rapidamente aplicações em qualquer ambiente e ter a certeza de que o seu código será executado.
 
