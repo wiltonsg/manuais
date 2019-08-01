@@ -99,7 +99,7 @@ sudo phpenmod mcrypt
 sudo systemctl restart apache2
 ```
 
-### Dica:
+### Dica
 
 Para facilitar sua vida mude a permissão da pasta html, isso pode ser feito facilmente rodando o comando abaixo.
 
@@ -133,7 +133,6 @@ sudo systemctl restart apache2
 
 Volte a pagina de informações, ctrl+f e procure por **xdebug support** e veja o XDebug está **enabled**
 
-
 ## Bônus 2: Instalar o Composer
 
 Novamente, se você esta configurando um ambiente de desenvolvimento este passo é segundo presentinho para você.
@@ -152,7 +151,6 @@ Execute composer no terminal e veja que agora você pode utilizá-lo onde quiser
 Finalizamos mais uma instalação, dessa vez configuramos nosso ambiente LAMP, instalamos tudo manualmente e deixamos tudo funcionando perfeitamente.
 
 Essa dica é muito boa para quem não se sente a vontade com o nginx ou prefere o bom e velho LAMP.
-
 
 Fontes:
 
